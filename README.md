@@ -1,5 +1,5 @@
 # etsy-clone
-&#10144; eCommerce clone using:  
+&#10144; Used Tecknologies
 &nbsp; &#10146; ruby on rails  
 &nbsp; &#10146; react js   
 &nbsp; &#10146; postgres
