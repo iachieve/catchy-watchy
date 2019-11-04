@@ -6,6 +6,3 @@
 &nbsp; &#10146; react js   
 &nbsp; &#10146; postgres
 
-
-![Drag Racing](https://github.com/RyanGonzalezUSA/etsy-clone/blob/master/readme/images/assus_gaming_labtop.jpg)
-
