@@ -1,0 +1,217 @@
+body,html {
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 10px 10px;
+
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar-brand {
+  font-family: Parisienne;
+  color:gold !important;
+}
+.full_page {
+height: 100vh;
+width: 100vw;
+  position: absolute;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ right: 0;
+   /* overflow: auto; */
+
+}
+
+.login-form {
+  width: 340px;
+  margin: 50px auto;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.login-form form {
+  margin-bottom: 15px;
+  padding: 30px;
+}
+
+.login-form h2 {
+  margin: 0 0 15px;
+  color: whitesmoke;
+}
+
+.form-control,
+.btn {
+  min-height: 38px;
+  border-radius: 2px;
+}
+
+.btn {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+
+
+/* items page and banner  begin */
+.top-5 {
+  position: relative;
+  top: 5px;
+}
+
+
+.top-bottom-20 {
+  padding-top: 20px;
+  bottom: 20px;
+}
+
+.price {
+  float: right;
+  color: red;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.price::before {
+  content: "$";
+  color: red;
+  font-weight: 600;
+}
+
+.item-img {
+  /* max-height: 240px; */
+  object-fit: scale-down;
+}
+
+.block-with-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: small;
+}
+
+.clear_a{
+      color: black;
+      text-decoration: none;
+      background-color: transparent;
+      margin: 0px;
+      padding: 0px;
+      display: contents;
+}
+
+/* items page end */
+
+.footer{
+  font-size: xx-large;
+  padding: 10px 0px;
+      /* position: absolute; */
+    /* bottom: 0;
+    width: 100%; */
+}
+
+
+/* for test only */
+#root {
+  /* background-color: yellow; */
+}
+
+.white-font{
+  color: white;
+}
+
+.red_background{
+  background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* item product details */
+
+/* .item_detail_column {
+  width: 25%;
+  padding: 10px;
+
+} */
+
+/* Style the images inside the grid */
+.item_detail_column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.item_detail_column img:hover {
+  opacity: 1;
+}
+
+#expandedImg{
+  width:80%;
+  max-height:350px;
+  object-fit: scale-down;
+  margin-top: 0.5rem;
+}
+
+.numberCircle {
+  border-radius: 50%;
+  text-align: center;
+}
+
+/* .zoom:hover {
+  transform: scale(1.03);
+  (150% zoom - Note: if the zoom is too large, it will go outside of the viewport)
+  transition: all .2s linear;
+} */
+
+.image-drop-shadow {
+  border: solid 1px #CCC;
+  -moz-box-shadow: 1px 1px 5px #999;
+  -webkit-box-shadow: 1px 1px 5px #999;
+  box-shadow: 1px 1px 5px #999;
+}
+
+.ml-1 {
+  margin-left: ($spacer * .25) !important;
+}
+
+
+.mt-15rem{
+  margin-top: 1.5rem;
+}
+
+.m-all-05{
+  margin: 0.5rem;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.black-1{
+  background-color: #505050;
+}
+
+/* .dv-star-rating-empty-star{
+  color: rgba(255, 255, 255, 0.954) !important;
+} */
+
+
+
+.nav-item{
+  cursor: pointer !important;
+}
