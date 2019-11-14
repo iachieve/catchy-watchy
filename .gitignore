@@ -34,4 +34,4 @@ npm-debug.log
 /config/master.key
 /config/newrelic.yml
 
-yarn.lock
+/package-lock.json
