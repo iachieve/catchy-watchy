@@ -1,0 +1,152 @@
+
+app/models/brand.rb,103
+class Brand < ApplicationRecordBrand1,0
+     has_many :item,item4,0
+     has_many :item,item=4,0
+
+app/models/item.rb,793
+class Item < ApplicationRecordItem1,0
+  belongs_to :seller,seller4,0
+  belongs_to :seller,seller=4,0
+  belongs_to :seller,build_seller4,0
+  belongs_to :seller,create_seller4,0
+  belongs_to :seller,create_seller!4,0
+  belongs_to :gender,gender9,0
+  belongs_to :gender,gender=9,0
+  belongs_to :gender,build_gender9,0
+  belongs_to :gender,create_gender9,0
+  belongs_to :gender,create_gender!9,0
+   belongs_to :color,color13,0
+   belongs_to :color,color=13,0
+   belongs_to :color,build_color13,0
+   belongs_to :color,create_color13,0
+   belongs_to :color,create_color!13,0
+    belongs_to :brand,brand17,0
+    belongs_to :brand,brand=17,0
+    belongs_to :brand,build_brand17,0
+    belongs_to :brand,create_brand17,0
+    belongs_to :brand,create_brand!17,0
+
+app/models/color.rb,170
+class Color < ApplicationRecordColor1,0
+   has_many :items,items4,0
+   has_many :items,items=4,0
+   has_many :items,item_ids4,0
+   has_many :items,item_ids=4,0
+
+app/models/gender.rb,99
+class Gender < ApplicationRecordGender1,0
+  has_many :item,item4,0
+  has_many :item,item=4,0
+
+app/models/application_record.rb,67
+class ApplicationRecord < ActiveRecord::BaseApplicationRecord1,0
+
+app/models/user.rb,1105
+class User < ApplicationRecordUser1,0
+  has_many :Items,Items3,0
+  has_many :Items,Items=3,0
+  has_many :Items,Item_ids3,0
+  has_many :Items,Item_ids=3,0
+  attr_reader :passwordpassword8,0
+  has_many :reviews,reviews16,0
+  has_many :reviews,reviews=16,0
+  has_many :reviews,review_ids16,0
+  has_many :reviews,review_ids=16,0
+  has_many :favoritesfavorites19,0
+  has_many :favoritesfavorites=19,0
+  has_many :favoritesfavorite_ids19,0
+  has_many :favoritesfavorite_ids=19,0
+  has_many :favorite_benches,favorite_benches20,0
+  has_many :favorite_benches,favorite_benches=20,0
+  has_many :favorite_benches,favorite_benche_ids20,0
+  has_many :favorite_benches,favorite_benche_ids=20,0
+  def self.find_by_credentials(username, password)find_by_credentials24,0
+  def password=(password)password=30,0
+  def is_password?(password)is_password?35,0
+  def reset_session_token!reset_session_token!39,0
+  def ensure_session_tokenensure_session_token47,0
+  def new_session_tokennew_session_token51,0
+  def generate_unique_session_tokengenerate_unique_session_token55,0
+
+app/jobs/application_job.rb,58
+class ApplicationJob < ActiveJob::BaseApplicationJob1,0
+
+app/controllers/application_controller.rb,249
+class ApplicationController < ActionController::BaseApplicationController1,0
+  def current_usercurrent_user8,0
+  def logged_in?logged_in?13,0
+  def login(user)login17,0
+  def logoutlogout23,0
+  def require_logged_inrequire_logged_in29,0
+
+app/controllers/static_pages_controller.rb,98
+class StaticPagesController < ApplicationControllerStaticPagesController1,0
+  def rootroot2,0
+
+app/controllers/api/users_controller.rb,206
+class Api::UsersController < ApplicationControllerUsersController1,0
+class Api::UsersController < ApplicationControllerApi::UsersController1,0
+  def createcreate2,0
+  def user_paramsuser_params15,0
+
+app/controllers/api/items_controller.rb,189
+class Api::ItemsController < ApplicationControllerItemsController1,0
+class Api::ItemsController < ApplicationControllerApi::ItemsController1,0
+  def indexindex3,0
+  def showshow7,0
+
+app/controllers/api/sessions_controller.rb,210
+class Api::SessionsController < ApplicationControllerSessionsController1,0
+class Api::SessionsController < ApplicationControllerApi::SessionsController1,0
+  def createcreate2,0
+  def destroydestroy16,0
+
+app/helpers/static_pages_helper.rb,47
+module StaticPagesHelperStaticPagesHelper1,0
+
+app/helpers/api/items_helper.rb,85
+module Api::ItemsHelperItemsHelper1,0
+module Api::ItemsHelperApi::ItemsHelper1,0
+
+app/helpers/api/sessions_helper.rb,97
+module Api::SessionsHelperSessionsHelper1,0
+module Api::SessionsHelperApi::SessionsHelper1,0
+
+app/helpers/application_helper.rb,47
+module ApplicationHelperApplicationHelper1,0
+
+app/channels/application_cable/connection.rb,195
+module ApplicationCableApplicationCable1,0
+  class Connection < ActionCable::Connection::BaseConnection2,0
+  class Connection < ActionCable::Connection::BaseApplicationCable::Connection2,0
+
+app/channels/application_cable/channel.rb,177
+module ApplicationCableApplicationCable1,0
+  class Channel < ActionCable::Channel::BaseChannel2,0
+  class Channel < ActionCable::Channel::BaseApplicationCable::Channel2,0
+
+config/application.rb,168
+module CatchyWatchyCatchyWatchy22,0
+  class Application < Rails::ApplicationApplication23,0
+  class Application < Rails::ApplicationCatchyWatchy::Application23,0
+
+db/migrate/20191112180058_create_colors.rb,91
+class CreateColors < ActiveRecord::Migration[6.0]CreateColors1,0
+  def changechange2,0
+
+db/migrate/20191112182924_create_genders.rb,93
+class CreateGenders < ActiveRecord::Migration[6.0]CreateGenders1,0
+  def changechange2,0
+
+db/migrate/20191112182818_create_brands.rb,91
+class CreateBrands < ActiveRecord::Migration[6.0]CreateBrands1,0
+  def changechange2,0
+
+db/migrate/20191112193019_create_items.rb,89
+class CreateItems < ActiveRecord::Migration[6.0]CreateItems1,0
+  def changechange2,0
+
+db/migrate/20191111203557_create_users.rb,89
+class CreateUsers < ActiveRecord::Migration[6.0]CreateUsers1,0
+  def changechange2,0
