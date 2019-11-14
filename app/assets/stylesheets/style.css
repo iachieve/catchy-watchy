@@ -183,7 +183,7 @@ width: 100vw;
 }
 
 .ml-1 {
-  margin-left: ($spacer * .25) !important;
+  margin-left: 0.25rem !important;
 }
 
 
