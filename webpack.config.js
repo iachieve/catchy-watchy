@@ -18,14 +18,20 @@ module.exports = {
             presets: ['@babel/env', '@babel/react']
           }
         },
-      }
+      } ,{
+        test: /\.css$/,
+        loaders: [
+          'style-loader',
+          'css-loader?modules'
+        ]
+      },
     ]
   },
   devtool: 'source-map',
   resolve: {
     extensions: [".js", ".jsx", "*"]
   },
-  mode: 'production'
+  // mode: 'production'
 };
 
 

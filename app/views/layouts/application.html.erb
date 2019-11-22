@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html>
   <head>
+ 
     <title>CatchyWatchy</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
+    <%= csp_meta_tag %> 
     <%= javascript_pack_tag 'application' %>
-    
+    <%= favicon_link_tag asset_path('favicon.ico') %>
+
+
   </head>
   
   <body>
     <%= yield %>
     
-    
-
-
-    
-    
+    <%= stylesheet_link_tag 'application', media: 'all' %>   
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    
-    
     <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
-    
-    <%= stylesheet_link_tag 'application', media: 'all' %>
+ 
+
+
+
+      <script>
+        const ALERT_PRIMARY = 'alert-primary';
+        const ALERT_SECONDARY = 'alert-secondary';
+        const ALERT_success = 'alert-success';
+        const ALERT_DANGER = 'alert-danger';
+        const ALERT_WARNING = 'alert-warning';
+        const ALERT_INFO = 'alert-info';
+        const ALERT_LIGHT = 'alert-light';
+        const ALERT_DARK = 'alert-dark';
+
+        function showAlert (message, alertType) {
+          $('#root').append('<div id="alertDiv" class="alert ' +  alertType + '"><a class="close" data-dismiss="alert">×</a><span>'+message+'</span></div>')
+            setTimeout(function() {
+              $("#alertDiv").remove();
+            }, 5000);}
+
+            window.b1 = "<%= image_url('b1.jpg') %>"
+            window.b2 = "<%= image_url('b2.jpg') %>"
+            window.b3 = "<%= image_url('b3.jpg') %>"
+            window.b4 = "<%= image_url('b4.jpg') %>"
+            window.b5 = "<%= image_url('b5.jpg') %>"
+            window.b6 = "<%= image_url('b6.jpg') %>"
+
+      </script>
+
 
   </body>
 </html>

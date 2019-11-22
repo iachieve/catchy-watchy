@@ -13,14 +13,20 @@ export const receiveItem = payload => ({
   payload,
 });
 
-export const fetchItems = () => dispatch => (
-  ItemUtil.fetchItems().
+export const fetchItems = (searchQuery) => dispatch => (
+  ItemUtil.fetchItems(searchQuery).
     then(payload => (dispatch(receiveAllItems(payload))
   ))
 );
 
 export const fetchItem = id => dispatch => (
   ItemUtil.fetchItem(id).
+    then(payload => (dispatch(receiveItem(payload))
+  ))
+);
+
+export const createItem = item => dispatch => (
+  ItemUtil.createItem(item).
     then(payload => (dispatch(receiveItem(payload))
   ))
 );

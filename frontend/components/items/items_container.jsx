@@ -2,21 +2,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ItemsIndexForm from './items_index';
 import {fetchItems} from '../../actions/items_actions';
-import { selectItemBrands} from '../../reducers/selectors';
+import { selectItemBrands, selectItemColors} from '../../reducers/selectors';
+import qs from 'query-string';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
+  const queryString = qs.parse(ownProps.location.search);
   let items = Object.values(state.entities.items);
-  let brands;
-  if(items){
-    brands = selectItemBrands(state, items)
-  }
   return {
-      items,
-      brands}
+      items, queryString}
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchItems: dispatch(fetchItems())
+  fetchItems: (searchQuery) => dispatch(fetchItems(searchQuery))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ItemsIndexForm);

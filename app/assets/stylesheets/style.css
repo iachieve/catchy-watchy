@@ -17,15 +17,38 @@ body,html {
   color:gold !important;
 }
 .full_page {
-height: 100vh;
+/* min-height: 90%; */
+/* height: auto; */
 width: 100vw;
+min-height: 100vh;
   position: absolute;
  top: 0;
  left: 0;
  bottom: 0;
  right: 0;
-   /* overflow: auto; */
+   overflow: auto;
+}
+.container{
+  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+  min-height: 78%;
+}
 
+.footer{
+  font-size: xx-large;
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  width: 100%; 
+  height: 3rem;
+}
+.center{
+  margin: 0 auto;
+}
+
+.footer-links{
+  display: inline-flex;
+  padding-top: 0.5rem;
 }
 
 .login-form {
@@ -85,15 +108,17 @@ width: 100vw;
 }
 
 .item-img {
-  /* max-height: 240px; */
-  object-fit: scale-down;
+  height: 14rem;
+  object-fit: cover;
 }
 
 .block-with-text {
   overflow: hidden;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   text-overflow: ellipsis;
+  height: 2.5rem;
   font-size: small;
+  padding: 0 0.4rem;
 }
 
 .clear_a{
@@ -107,13 +132,7 @@ width: 100vw;
 
 /* items page end */
 
-.footer{
-  font-size: xx-large;
-  padding: 10px 0px;
-      /* position: absolute; */
-    /* bottom: 0;
-    width: 100%; */
-}
+
 
 
 /* for test only */
@@ -121,13 +140,7 @@ width: 100vw;
   /* background-color: yellow; */
 }
 
-.white-font{
-  color: white;
-}
 
-.red_background{
-  background-color: red;
-}
 
 
 
@@ -158,10 +171,17 @@ width: 100vw;
 }
 
 #expandedImg{
-  width:80%;
-  max-height:350px;
+  width:100%;
+  height:400px;
   object-fit: scale-down;
   margin-top: 0.5rem;
+    object-fit: cover;
+}
+
+.item-detail-thumbnails{
+  object-fit: cover;
+  height: 10rem;
+  width: 20%;
 }
 
 .numberCircle {
@@ -185,7 +205,9 @@ width: 100vw;
 .ml-1 {
   margin-left: 0.25rem !important;
 }
-
+.navbar{
+  margin-bottom: 5px;
+}
 
 .mt-15rem{
   margin-top: 1.5rem;
@@ -203,15 +225,154 @@ width: 100vw;
 }
 
 .black-1{
-  background-color: #505050;
+  background-color: #505050 !important;
 }
 
-/* .dv-star-rating-empty-star{
-  color: rgba(255, 255, 255, 0.954) !important;
+/* .black-1:hover{
+  background-color:#000000 !important;
 } */
 
 
+.alert{
+  top: 4rem;
+  max-width: 15rem;
+  position: fixed;
+  left: 0.5rem;
+}
 
+.container{
+  margin-bottom: 2.6rem;
+}
 .nav-item{
   cursor: pointer !important;
+}
+
+
+
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.green-background{
+  background-color: green;
+}
+
+.blue-background{
+  background-color: blue;
+}
+
+.padding-0{
+  padding: 0 !important;
+}
+.red-background{
+  background-color: red;
+}
+
+
+.padding-t-b-1{
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+a:hover{
+  background-color:inherit;
+}
+
+
+
+
+/* workaround to fix ck editor */
+span.ck-file-dialog-button {
+  display: none;
+}
+.ck-rounded-corners.ck-editor__editable_inline {
+  min-height: 10rem !important;
+}
+
+
+.image-create-product-wrapper-container{
+  display: flex !important;
+  justify-content: center !important;
+  text-align:center;
+}
+.image-create-product-wrapper{
+  margin-right: 0.4rem;
+}
+.image-create-product{
+  border-style: outset;
+  width: 100% ;
+  height: 7rem;
+  /* display: inline; */
+  position: relative;
+  object-fit: cover;
+
+}
+.close-create-product-image {
+  position: absolute;
+  top: -0.6rem;
+  right: 0px;
+  
+  
+  /* z-index: 100; */
+
+}
+
+.clear-padding{
+  padding:0px !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.create-new-item-card{
+  max-width: 60%;
+    margin: 0 auto;
+}
+
+
+.loading{
+  background: url('loader.gif') center no-repeat;
+  background-size: cover;
+
+}
+
+.inset-text{
+text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
+    font-size: xx-large;
+}
+
+.shopping-cart-image{
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+.carousel img {
+  width:100%px;
+  height:360px;
+  object-fit: cover;
+}
+
+
+.favorite-item-image{
+  width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 10rem;
 }

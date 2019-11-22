@@ -9,7 +9,7 @@ class Api::ReviewsController < ApplicationController
     @reviews = item.reviews.includes(:author)
   end
 
-  def create
+   def create
     item = Item.find(params[:item_id])
     @review = Review.new(review_params)
     @review.author_id = current_user.id

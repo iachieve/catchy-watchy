@@ -1,27 +1,16 @@
 json.item do 
-
   json.id @item.id
+  json.title @item.title
   json.description @item.description
-  json.photos  @item.photos
+  json.photoUrls @item.photos.map { |file| url_for(file) }
   json.price @item.price
   json.genderId @item.gender_id
   json.brandId @item.brand_id
   json.colorId @item.color_id
   json.sellerId @item.seller_id
 
+  json.gender @item.gender.name
+  json.brand @item.brand.name
+  json.color @item.color.name
+  json.seller @item.seller.username
 end
-
-json.color do 
-  json.extract! @item.color, :id, :name
-end
-
-json.brand do 
-  json.extract! @item.brand, :id, :name
-end
-json.seller do 
-  json.extract! @item.seller, :id, :username
-end
-json.gender do 
-  json.extract! @item.gender, :id, :name
-end
-

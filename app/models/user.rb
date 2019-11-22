@@ -4,10 +4,17 @@ class User < ApplicationRecord
   class_name: :Item,
   foreign_key: :seller_id
 
+  has_many :favorites,
+  class_name: :Favorite,
+  foreign_key: :user_id
 
    has_many :reviews,
   class_name: :Review,
   foreign_key: :author_id
+
+  has_many :cart_items,
+  class_name: :CartItem,
+  foreign_key: :buyer_id
 
   attr_reader :password
 

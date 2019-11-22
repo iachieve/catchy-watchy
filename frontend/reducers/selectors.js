@@ -6,6 +6,14 @@ export const selectItemBrands = (state, items)=>{
   return brands;
 }
 
+export const selectItemColors = (state, items)=>{
+  let colors = [];
+  items.forEach(item => {
+    colors.push(state.entities.colors[item.colorId])
+  });
+  return colors;
+}
+
 export const selectItemReviewsCount = (state, item)=>{
   let reviewsCount = 0;
   let reviews = Object.values(state.entities.reviews);
@@ -16,6 +24,21 @@ export const selectItemReviewsCount = (state, item)=>{
   });
   return reviewsCount;
 }
+
+export const selectItemReviewsAverage = (state, itemId)=>{
+  let reviewsCount = 0;
+  let totalRanks = 0
+  let reviews = Object.values(state.entities.reviews);
+  // debugger
+  reviews.forEach(review =>{
+    if(review.itemId == itemId){
+      reviewsCount += 1;
+      totalRanks += review.rank
+    }
+  });
+  return totalRanks / reviewsCount;
+}
+
 
 export const selectItemReviewers = (state, reviews) => {
   let authors = [];
@@ -28,4 +51,15 @@ export const selectItemReviewers = (state, reviews) => {
     }
   });
   return authors;
+}
+
+export const selectItemReviews = (state, itemId) =>{
+  let reviews = Object.values(state.entities.reviews);
+ return reviews.filter(review => { return itemId == review.itemId})
+}
+
+export const selectCurrentUserReview = (state, userId, itemId)=>{
+  let reviews = Object.values(state.entities.reviews);
+  // debugger;
+  return reviews.filter(review => { return userId == review.authorId && itemId == review.itemId}).length > 0 ? true : false;
 }

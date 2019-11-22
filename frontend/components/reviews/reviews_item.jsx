@@ -26,13 +26,15 @@ const ReviewsItem = ({review, author}) => {
             <p>
               <a
                 className="float-left"
-                href="https://maniruzzaman-akash.blogspot.com/p/contact.html"
-              >
+                href="https://maniruzzaman-akash.blogspot.com/p/contact.html">
                
               </a>
             </p>
             <div className="clearfix"></div>
-            <p>{review.body}</p>
+
+            <div dangerouslySetInnerHTML={{__html: review.body}} />
+            {/* {review.body} */}
+            
           </div>
         </div>
       </div>

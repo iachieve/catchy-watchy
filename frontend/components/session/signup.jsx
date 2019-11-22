@@ -3,12 +3,7 @@ import React from 'react';
 class Signup extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      username: '',
-      email: '',
-      password: '',
-    };
-
+    this.state = {username: '', password: ''};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -20,16 +15,18 @@ class Signup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createNewUser(this.state)
-      .then(() => this.props.history.push('/items'));
+    this.props.createNewUser(this.state);
   }
 
-  render() {
+  render() {      
+    let {errors} = this.props ;
+    if(errors && errors.length > 0){
+      errors.map(error=>(window.showAlert(error, 'alert-danger')))
+    }
     return (   
-   
-
+      <div className="container">
       <div className="login-form bg-dark">
-      <form>
+      <form onSubmit={this.handleSubmit}>
             <h2 className="text-center">Sign up</h2>
             <div className="form-group">
               <input type="text" className="form-control" placeholder="Username" required="required" onChange={this.handleInput('username')}/>
@@ -43,7 +40,7 @@ class Signup extends React.Component {
                   
       </form>
     </div>
-
+    </div>
 
     );
   }

@@ -1,19 +1,19 @@
 import React from 'react';
+import { withRouter} from 'react-router-dom'
+import {Link } from 'react-router-dom'
 
-const ItemList = ({ item, brand }) => {
-  let photos = JSON.parse(item.photos)
-  let randomImage = photos[Math.floor(Math.random() * photos.length)];
+const ItemList = ({ item }) => {
 
   return (
-
-    <div className="col-sm-4  top-bottom-20">
+    <div className="col-sm-3  top-bottom-20">
       <div className="card">
-        <img src={randomImage} alt="" className="card-img-top item-img"/>
-        <div className="card-body">
-          <h5 className="card-title">{brand.name}</h5>
-          <span className="price">{item.price}</span>
-          <p className=" block-with-text">{item.description }</p>
-        </div>
+      <Link to={`/items/${item.id}`} className="clear_a">
+        <img src={item.photoUrls[0]} alt="" className="item-img loading"/>
+        <center>{item.brand}
+        &nbsp; <strong className="text-danger">${item.price}</strong>
+        </center>
+        <p className="block-with-text">{item.title}</p>
+      </Link>
       </div>
     </div>
   );
