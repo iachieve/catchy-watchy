@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_16_010847) do
+ActiveRecord::Schema.define(version: 2019_11_22_100146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,8 +55,16 @@ ActiveRecord::Schema.define(version: 2019_11_16_010847) do
 
   create_table "colors", force: :cascade do |t|
     t.string "name", null: false
+    t.string "HEX", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "item_id"
+    t.index ["item_id"], name: "index_favorites_on_item_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "genders", force: :cascade do |t|
@@ -66,6 +74,7 @@ ActiveRecord::Schema.define(version: 2019_11_16_010847) do
   end
 
   create_table "items", force: :cascade do |t|
+    t.string "title", null: false
     t.string "description", null: false
     t.float "price", null: false
     t.integer "gender_id", null: false
@@ -74,8 +83,8 @@ ActiveRecord::Schema.define(version: 2019_11_16_010847) do
     t.integer "seller_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["description", "seller_id"], name: "index_items_on_description_and_seller_id", unique: true
     t.index ["description"], name: "index_items_on_description"
+    t.index ["title", "seller_id"], name: "index_items_on_title_and_seller_id", unique: true
   end
 
   create_table "reviews", force: :cascade do |t|
