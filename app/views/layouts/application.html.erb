@@ -47,6 +47,12 @@
             window.b5 = "<%= image_url('b5.jpg') %>"
             window.b6 = "<%= image_url('b6.jpg') %>"
 
+            $(document).ready(function() {
+              $('.carousel').carousel({
+              interval: 2000,
+              cycle: true
+            })
+    });   
       </script>
 
 
